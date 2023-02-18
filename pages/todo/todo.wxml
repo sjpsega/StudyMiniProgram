@@ -1,0 +1,12 @@
+<view class="todolist-container">
+    <view class="todo-input-container">
+        <input class="todo-input" type="text" value="{{inputValue}}" placeholder="输入 ToDo" maxlength="80" bindconfirm="addTodo" focus="true"></input>
+    </view>
+    <checkbox-group class="todo-item-container" bindchange="checkboxgroupChangeHandler">
+        <label class="todo-item" wx:for="{{todos}}" wx:for-item="todo" wx:key="time">
+            <checkbox class="todo-item-checkbox" checked="{{todo.isdone}}" value="{{todo.content}}"></checkbox>
+            <text class="todo">{{todo.content}}</text>
+        </label>
+    </checkbox-group>
+</view>
+  
